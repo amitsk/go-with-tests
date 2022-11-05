@@ -7,3 +7,24 @@ func Sum(numbers []int) int {
 	}
 	return sum
 }
+
+func SumAll(numbers ...[]int) []int {
+	var sums []int
+	for _, nums := range numbers {
+		sums = append(sums, Sum(nums))
+	}
+	return sums
+}
+
+func SumAllTails(numbers ...[]int) []int {
+	var sums []int
+	for _, nums := range numbers {
+		if len(nums) > 1 {
+			sums = append(sums, Sum(nums[1:]))
+		} else {
+			sums = append(sums, 0)
+		}
+
+	}
+	return sums
+}
