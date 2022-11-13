@@ -32,7 +32,6 @@ func TestSum(t *testing.T) {
 		want := 15
 		assert.Equal(want, got, "got %d want %d given, %v", got, want, numbers)
 	})
-
 }
 
 func TestSumAll(t *testing.T) {
@@ -42,7 +41,6 @@ func TestSumAll(t *testing.T) {
 		want := []int{3, 9}
 		assert.ElementsMatch(want, got, "got %v want %v", got, want)
 	})
-
 }
 
 func TestSumTailsTable(t *testing.T) {
